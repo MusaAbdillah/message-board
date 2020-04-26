@@ -48,10 +48,18 @@ app.get("/messages", (req, res, next) => {
 
 })
 app.post("/messages", (req, res, next) => {
+	console.log("data on index.js=====================")
+	console.log(req.body)
+	console.log("data on index.js=====================")
 	req.checkBody("name", "Invalid name in body").notEmpty()
-	var errors = req.validatorErrors()
+	req.checkBody("message", "Invalid message in body").notEmpty()
+	var errors = req.validationErrors()
+	let newMessage = {
+		name: req.body.name,
+		message: req.body.message
+	}
 	if (errors) return next(errors)
-	req.messages.insert(req.body, (err, result) => {
+	req.messages.insert(newMessage, (err, result) => {
 		if (err) return next(errors)
 		return res.json(result.ops[0]) 
 	})
