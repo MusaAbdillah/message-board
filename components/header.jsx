@@ -1,13 +1,7 @@
 const React = require("react")
 
 const Header = () => {
-	return(
-		<div>
-			<div className="span12">
-				<p>Message Board</p>
-			</div>
-		</div>
-	)
+	return(<h1>Message Board</h1>)
 }
 
 module.exports = Header

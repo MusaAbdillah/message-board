@@ -10212,17 +10212,9 @@ const React = __webpack_require__(26);
 
 const Header = () => {
 	return React.createElement(
-		"div",
+		"h1",
 		null,
-		React.createElement(
-			"div",
-			{ className: "span12" },
-			React.createElement(
-				"p",
-				null,
-				"Message Board"
-			)
-		)
+		"Message Board"
 	);
 };
 
