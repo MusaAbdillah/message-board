@@ -7,6 +7,6 @@
 2. cd message-board
 3. npm install
 4. npm run build
-5. npm start!
+5. npm start
 6. navigate browser to localhost:3000
-7. enjoy
+7. enjoy!
